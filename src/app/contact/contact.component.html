@@ -1,0 +1,63 @@
+<h2>Implementing a Loading Skeleton in Angular</h2>
+
+
+<hr style="margin-top: 20px; margin-bottom: 20px;" />
+
+<button (click)="load()">Load</button>
+
+<h3>Inline</h3>
+<div class="flex items-center">
+	<p>Some data:</p>
+	<p *skeleton="isLoading; height: '20px'; width: '200px'">
+		Implementing a Loading Skeleton in Angular
+	</p>
+</div>
+
+<h3>Standalone</h3>
+<section class="flex mb-2">
+	<ng-container
+			*skeleton="isLoading; repeat: 5; className: 'mr-2'; height: '100px'"
+	>
+		<div *ngFor="let num of [1, 2, 3, 4, 5]" class="mr-2">
+			{{ num }}
+		</div>
+	</ng-container>
+</section>
+
+<h3>Random Width</h3>
+<ng-container
+		*skeleton="isLoading;
+    repeat: 5;
+    className: 'mb-2';
+    height: '30px';
+    width: 'rand'
+  "
+>
+	<div *ngFor="let num of [1, 2, 3, 4, 5]">
+		{{ num }}
+	</div>
+</ng-container>
+
+<table style="width: 100%;" >
+	<thead>
+	<tr>
+		<td>
+			<span *skeleton="isLoading; height: '20px' width: '200px' ">Name</span>
+		</td>
+		<td>Location</td>
+		<td>ID Number</td>
+		<td>Contact</td>
+	</tr>
+	</thead>
+	<ng-container >
+		<tbody *skeleton="isLoading; repeat: 10; className: 'mb-2'; height: '20px' width: 'rand'" >
+<tr *ngFor="let i of [1,2,3,4,5,6,55,4,3,2,5]">
+	<td>Emmanuel Chesire</td>
+	<td>Lagos</td>
+	<td>123456789</td>
+	<td>08052345678</td>
+</tr>
+</tbody>
+
+	</ng-container>
+</table>
