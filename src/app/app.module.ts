@@ -11,6 +11,7 @@ import {SkeletonDirective} from "./shared/skeleton-loader/skeleton-directive";
 import {SkeletonRectComponent} from "./shared/skeleton-loader/skeleton-rect";
 import { CounterComponent } from './components/counter/counter.component';
 import { HomeComponent } from './home/home.component';
+import { ServiceCounterComponent } from './components/service-counter/service-counter.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeComponent } from './home/home.component';
     SkeletonDirective,
     SkeletonRectComponent,
     CounterComponent,
-    HomeComponent
+    HomeComponent,
+    ServiceCounterComponent
   ],
   imports: [
     BrowserModule,

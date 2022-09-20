@@ -57,8 +57,8 @@ describe('HomeComponent', () => {
     expect(serviceCounter).toBeTruthy();
   })
 
-  it('renders a NgRx counter', () => {
-    const ngRxCounter = findComponent(fixture, 'app-ngrx-counter');
-    expect(ngRxCounter).toBeTruthy();
-  })
+  // it('renders a NgRx counter', () => {
+  //   const ngRxCounter = findComponent(fixture, 'app-ngrx-counter');
+  //   expect(ngRxCounter).toBeTruthy();
+  // })
 });
