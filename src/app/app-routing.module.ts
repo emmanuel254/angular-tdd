@@ -4,9 +4,11 @@ import {PageNotFoundComponent} from "./page-not-found-component/page-not-found-c
 import {ContactComponent} from "./contact/contact.component";
 import {CounterComponent} from "./components/counter/counter.component";
 import {HomeComponent} from "./home/home.component";
+import {SignupComponent} from "./signup/signup.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
+  {path: 'signup', component: SignupComponent},
   { path: '**', component: PageNotFoundComponent }
 ];
 

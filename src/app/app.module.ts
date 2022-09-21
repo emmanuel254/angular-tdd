@@ -12,6 +12,11 @@ import {SkeletonRectComponent} from "./shared/skeleton-loader/skeleton-rect";
 import { CounterComponent } from './components/counter/counter.component';
 import { HomeComponent } from './home/home.component';
 import { ServiceCounterComponent } from './components/service-counter/service-counter.component';
+import { SignupComponent } from './signup/signup.component';
+import { ControlErrorsComponent } from './components/control-errors/control-errors.component';
+import { ErrorMessageDirective } from './shared/directives/error-message.directive';
+import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -22,13 +27,18 @@ import { ServiceCounterComponent } from './components/service-counter/service-co
     SkeletonRectComponent,
     CounterComponent,
     HomeComponent,
-    ServiceCounterComponent
+    ServiceCounterComponent,
+    SignupComponent,
+    ControlErrorsComponent,
+    ErrorMessageDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    ReactiveFormsModule,
+      HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
